@@ -81,6 +81,13 @@ services:
     depends_on:
       - partkeepr
 
+  vscode:
+    image: codercom/code-server
+    ports:
+      - "8081:8080"
+    volumes:
+      - partkeepr-web:/home/coder/workspace
+
 volumes:
   partkeepr-conf:
   partkeepr-data:
