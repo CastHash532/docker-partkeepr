@@ -83,6 +83,7 @@ services:
 
   vscode:
     image: codercom/code-server
+    privileged: true
     ports:
       - "8081:8080"
     volumes:
