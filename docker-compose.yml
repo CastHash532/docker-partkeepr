@@ -86,7 +86,9 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - partkeepr-web:/home/coder/workspace
+      - partkeepr-web:/home/coder/workspace/web
+      - partkeepr-data:/home/coder/workspace/data
+      - partkeepr-conf:/home/coder/workspace/config
 
 volumes:
   partkeepr-conf:
