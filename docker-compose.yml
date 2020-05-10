@@ -66,6 +66,8 @@ services:
       - partkeepr-conf:/var/www/html/app/config
       - partkeepr-data:/var/www/html/data
       - partkeepr-web:/var/www/html/web
+      - partkeepr-src:/home/coder/workspace/src
+
     depends_on:
       - database
 
@@ -91,9 +93,11 @@ services:
       - partkeepr-web:/home/coder/workspace/web
       - partkeepr-data:/home/coder/workspace/data
       - partkeepr-conf:/home/coder/workspace/config
+      - partkeepr-src:/home/coder/workspace/src
 
 volumes:
   partkeepr-conf:
   partkeepr-data:
+  partkeepr-src:
   partkeepr-web:
   mysql-data:
